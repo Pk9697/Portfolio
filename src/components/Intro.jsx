@@ -7,7 +7,7 @@ function Intro() {
             Hi, I am <strong>Jane Smith</strong>
         </h1>
         <p className="section__subtitle section__subtitle--intro">front-end dev</p>
-        <img src="../img/dev-jane-01.jpg" alt="profile-pic" />
+        <img src="../img/dev-jane-01.jpg" alt="profile-pic" className='intro__img' />
     </section>
   )
 }
