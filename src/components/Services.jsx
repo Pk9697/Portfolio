@@ -27,7 +27,7 @@ function Services() {
                 ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
             </div>
         </div>
-        <a href="#work" className='btn'></a>
+        <a href="#work" className='btn'>see my work</a>
     </section>
   )
 }
