@@ -15,7 +15,7 @@ function AboutMe() {
             aliqua. Ut enim ad minim veniam, quis nostrud exercitation
              ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
         </div>
-        <img src="../img/dev-jane-02.jpg" alt="" />
+        <img src="../img/dev-jane-02.jpg" alt="" className='about-me__img'/>
     </section>
   )
 }
