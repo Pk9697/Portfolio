@@ -265,3 +265,53 @@ h3{font-size: var(--fs-h3);}
     }
 
 }
+
+/* My Work */
+.my-work{
+    background-color: var(--clr-dark);
+    color: var(--clr-light);
+    text-align: center;
+}
+/* can be put on typography section cos no layout is changing in here */
+.section__subtitle--work{
+    color: var(--clr-accent);
+    font-weight: var(--fw-bold);
+    margin-bottom: 2em;
+}
+/* using grid to make this section responsive as we won't require media queries
+if we use grid here */
+.portfolio{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
+    gap: 1em;
+}
+
+.portfolio__item{
+    background-color: var(--clr-accent);
+    /* to avoid popping out of img out of its grid when we are using transform 
+    on hover */
+    overflow: hidden;
+}
+
+.portfolio__img{
+    transition: transform 750ms cubic-bezier(0.075, 0.82, 0.165, 1),
+                opacity 250ms linear;
+}
+/* to keep borders popping out to be always at top if img are too close
+cos borders can become invisible */
+.portfolio__item:focus{
+    position: relative;
+    z-index: 2;
+}
+/* can't apply focus on img so instead we use on img parent which is a link */
+.portfolio__img:hover,
+.portfolio__item:focus .portfolio__img
+{
+    transform: scale(1.2);
+    opacity: .5;
+}
+
+
+
+
+
