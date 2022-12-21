@@ -124,8 +124,64 @@ h3{font-size: var(--fs-h3);}
 }
 
 /* Header section */
+
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1em;
+    position: relative;
+    
+}
+
+.logo{
+    max-width: 150px;
+}
+
+.nav-toggle{
+    cursor: pointer;
+    align-self: center;
+}
+
 .nav{
-    display: none;
+    /* display: none; */
+    box-shadow: var(--bs);
+    position: absolute;
+    top: 3.7em;
+    right: 0;
+    background-color: var(--clr-light);
+
+}
+
+.nav__list{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: center;   
+}
+
+.nav__item:not(.nav__item:last-child){
+    border-bottom: 1px solid rgba(17, 17, 17, 0.087);
+}
+
+/* .nav__item{
+    padding: 0;
+    margin: 0;
+} */
+.nav__link{
+    width: 100%;
+    display: inline-block;
+    padding: 0.5em 1.25em;
+}
+
+.nav__link:hover{
+    color: var(--clr-accent);
+}
+
+.nav__link{
+    text-decoration: none;
+    font-weight: var(--fw-bold);
+    color: inherit;
 }
 
 /* Intro section */

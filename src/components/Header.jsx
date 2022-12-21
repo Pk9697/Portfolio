@@ -1,15 +1,21 @@
 import React from 'react'
 
 function Header() {
+    const [isNavOpen, setisNavOpen] = React.useState(false)
+    // const styles = {
+    //     transition: 'transform 2s',
+    //     transform: 'rotate(90deg)',
+    // };
   return (
-    <header>
+    <header className='header'>
         <div className="logo">
             <img src="../img/devjane.png" alt="devjane_logo" /> 
         </div>
-        <button className='nav-toggle' aria-label='toggle navigation'> 
-            <span className='hamburger'></span>
-        </button>
-        <nav className='nav'>
+        <div className='nav-toggle' aria-label='toggle navigation' onClick={()=>setisNavOpen(prev=>!prev)}> 
+            <span className='hamburger'><i className="fa-solid fa-bars fa-xl"></i></span>
+        </div>
+        {isNavOpen && 
+        <nav className='nav' id='nav'>
             <ul className="nav__list">
                 <li className="nav__item"><a href="#home" className='nav__link'>Home</a></li>
                 <li className="nav__item"><a href="#my-services" className='nav__link'>My Services</a></li>
@@ -17,6 +23,7 @@ function Header() {
                 <li className="nav__item"><a href="#work" className='nav__link'>My Work</a></li>
             </ul>
         </nav>
+        }       
     </header>
   )
 }
