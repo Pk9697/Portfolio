@@ -37,6 +37,9 @@
 }
 
 /* General Styles */
+html{
+    scroll-behavior: smooth;
+}
 
 body{
     background-color: var(--clr-light);

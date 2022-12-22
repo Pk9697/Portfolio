@@ -7,22 +7,22 @@ function Footer() {
         <ul className="social-list">
             <li className="social-list__item">
                 <a href="#" className="social-list__link">
-                    <i class="fa-brands fa-github"></i>
+                    <i className="fa-brands fa-github"></i>
                 </a>
             </li>
             <li className="social-list__item">
                 <a href="#" className="social-list__link">
-                    <i class="fa-brands fa-linkedin"></i>
+                    <i className="fa-brands fa-linkedin"></i>
                 </a>
             </li>
             <li className="social-list__item">
                 <a href="#" className="social-list__link">
-                    <i class="fa-brands fa-instagram"></i>
+                    <i className="fa-brands fa-instagram"></i>
                 </a>
             </li>
             <li className="social-list__item">
                 <a href="#" className="social-list__link">
-                    <i class="fa-brands fa-twitter"></i>
+                    <i className="fa-brands fa-twitter"></i>
                 </a>
             </li>
         </ul>
