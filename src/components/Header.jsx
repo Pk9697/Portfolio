@@ -1,6 +1,6 @@
 import React from 'react'
-
-function Header() {
+import {Link} from 'react-router-dom'
+function Header(props) {
     const [isNavOpen, setisNavOpen] = React.useState(false)
     const style1= {
         transition: 'transform 1s',
@@ -25,10 +25,10 @@ function Header() {
         {isNavOpen && 
         <nav className='nav' id='nav'>
             <ul className="nav__list">
-                <li className="nav__item"><a href="#home" className='nav__link' onClick={handleClick}>Home</a></li>
-                <li className="nav__item"><a href="#my-services" className='nav__link' onClick={handleClick}>My Services</a></li>
-                <li className="nav__item"><a href="#about" className='nav__link' onClick={handleClick}>About me</a></li>
-                <li className="nav__item"><a href="#work" className='nav__link' onClick={handleClick}>My Work</a></li>
+                <li className="nav__item"><Link to="/" className='nav__link' onClick={handleClick}>Home</Link></li>
+                {props.name && <li className="nav__item"><a href="#my-services" className='nav__link' onClick={handleClick}>My Services</a></li>}
+                {props.name &&<li className="nav__item"><a href="#about" className='nav__link' onClick={handleClick}>About me</a></li>}
+                {props.name &&<li className="nav__item"><a href="#work" className='nav__link' onClick={handleClick}>My Work</a></li>}
             </ul>
         </nav>
         }       

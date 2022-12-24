@@ -370,7 +370,37 @@ cos borders can become invisible */
     opacity: .5;
 }
 
+/* Individual portfolio items */
+.portfolio-item-individual{
+    padding: 0 2em 2em;
+    max-width: 1000px;
+    margin: 0 auto;
+}
 
+.portfolio-item-individual__img{
+    margin: 0 auto;
+    box-shadow: var(--bs);
+}
+
+.portfolio-item-individual p{
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.project-link{
+    text-decoration: none;
+    color: var(--clr-dark);
+    font-weight: var(--fw-bold);
+}
+.project-link:hover{
+    text-decoration: underline;
+    opacity: 0.9;
+}
+
+.project-link:focus{
+    outline: 3px solid var(--clr-dark);    
+}
 /* Footer */
 
 .footer{
