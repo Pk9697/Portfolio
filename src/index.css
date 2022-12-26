@@ -107,6 +107,8 @@ h3{font-size: var(--fs-h3);}
 
 .section__title--intro{
     font-weight: var(--fw-reg);
+    /* flex-wrap: wrap; */
+    max-width: 400px;
 }
 
 .section__title--intro strong{
@@ -355,6 +357,8 @@ if we use grid here */
 .portfolio__img{
     transition: transform 750ms cubic-bezier(0.075, 0.82, 0.165, 1),
                 opacity 250ms linear;
+    object-fit: cover;
+    height: 100%;
 }
 /* to keep borders popping out to be always at top if img are too close
 cos borders can become invisible */
@@ -380,12 +384,21 @@ cos borders can become invisible */
 .portfolio-item-individual__img{
     margin: 0 auto;
     box-shadow: var(--bs);
+    /* align-self: center; */
+    height: 100%;
+    object-fit: cover;
 }
 
 .portfolio-item-individual p{
     max-width: 600px;
     margin-left: auto;
     margin-right: auto;
+}
+
+.portfolio-item-individual__img-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(200px,1fr));
+    gap: 1em;
 }
 
 .project-link{

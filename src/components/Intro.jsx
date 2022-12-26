@@ -9,7 +9,7 @@ function Intro(props) {
             {props.title} {props.name && <strong>Jane Smith</strong>}
         </h1>
         <p className="section__subtitle section__subtitle--intro">{subtitleElement}</p>
-        <img src={`../img/${props.img}`} alt="profile-pic" className='intro__img' />
+        <img src={`../pImg/${props.img[0]}`} alt="profile-pic" className='intro__img' />
     </section>
   )
 }

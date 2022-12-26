@@ -1,6 +1,5 @@
 import React from 'react'
-import {BrowserRouter,Routes,Route,Link} from 'react-router-dom'
-import PortfolioItem from './PortfolioItem'
+import {Link} from 'react-router-dom'
 import { portfolioData } from '../portfolioData'
 function MyWork() {
 
@@ -11,7 +10,7 @@ function MyWork() {
             to="/portfolio"
             state={{...item}}
             className="portfolio__item">
-            <img src={`../img/${item.img}`} alt="" className='portfolio__img'/>
+            <img src={`../pImg/${item.img[0]}`} alt="" className='portfolio__img'/>
         </Link>
     ))
   return (

@@ -9,7 +9,7 @@ import Footer from './components/Footer'
 function App() {
   const introData={
     id:"00",
-    img:"dev-jane-01.jpg",
+    img:["dev-jane-01.jpg"],
     title:"Hi, I am",
     subtitle:"front-end dev",
     name:"Jane Smith"
