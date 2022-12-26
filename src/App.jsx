@@ -9,10 +9,10 @@ import Footer from './components/Footer'
 function App() {
   const introData={
     id:"00",
-    img:["dev-jane-01.jpg"],
+    img:["profile.jpg"],
     title:"Hi, I am",
     subtitle:"front-end dev",
-    name:"Jane Smith"
+    name:"Prashant Kumar"
   }
   return (
     <div className="App">

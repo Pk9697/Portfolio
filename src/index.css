@@ -108,7 +108,7 @@ h3{font-size: var(--fs-h3);}
 .section__title--intro{
     font-weight: var(--fw-reg);
     /* flex-wrap: wrap; */
-    max-width: 400px;
+    /* max-width: 400px; */
 }
 
 .section__title--intro strong{
@@ -289,6 +289,10 @@ h3{font-size: var(--fs-h3);}
 
 .about-me__img{
     box-shadow: var(--bs);
+    object-fit: cover;
+    object-position: center;
+    height: 100%;
+    
 }
 
 @media (min-width:600px){
