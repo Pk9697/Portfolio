@@ -1,7 +1,8 @@
 import React from 'react'
 
 function Intro(props) { 
-  const subtitleElement=!props.link?props.subtitle:<a className='project-link' href={`${props.link}`} target='_blank'>--Checkout Live--</a> 
+  const cvElement=<>{props.subtitle} <a className='project-link' href='../pImg/resume.pdf' target='_blank'>--CV--</a></>
+  const subtitleElement=!props.link?cvElement :<a className='project-link' href={`${props.link}`} target='_blank'>--Live--</a> 
   // console.log(subtitleElement)
   return (
     <section className='intro' id='home'>

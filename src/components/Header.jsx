@@ -17,7 +17,8 @@ function Header(props) {
   return (
     <header className='header'>
         <div className="logo">
-            <img src="../img/devjane.png" alt="devjane_logo" /> 
+            {/* <img src="../img/devjane.png" alt="devjane_logo" />  */}
+            <h3>{`<Portfolio>`}</h3>
         </div>
         <div className='nav-toggle' aria-label='toggle navigation' onClick={handleClick}> 
             <span className='hamburger'><i style={isNavOpen?style1:style2} className="fa-solid fa-bars fa-xl"></i></span>
