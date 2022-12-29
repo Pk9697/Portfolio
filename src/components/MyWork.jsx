@@ -1,6 +1,6 @@
 import React from 'react'
 import {Link} from 'react-router-dom'
-import { portfolioData } from '../portfolioData'
+import { portfolioData } from '../portfolioData' 
 function MyWork() {
 
     // console.log(portfolioData)
