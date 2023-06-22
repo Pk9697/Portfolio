@@ -1,16 +1,18 @@
-import React from 'react'
+import React, { useState } from 'react'
 import {Link} from 'react-router-dom'
-import { portfolioData } from '../portfolioData' 
-function MyWork() {
+// import { portfolioData } from '../portfolioData' 
+import Image from './Image'
 
-    // console.log(portfolioData)
-    const portfolioItems=portfolioData.map(item=>(
+
+function MyWork({ portfolioData = [] }) {
+    
+    const portfolioItems = portfolioData.map(item => (
         <Link 
             key={item.id}
             to="/portfolio"
             state={{...item}}
             className="portfolio__item">
-            <img src={`../pImg/${item.img[0]}`} alt="" className='portfolio__img'/>
+            <Image assetName={item.img[0]} className='portfolio__img'/>
         </Link>
     ))
   return (
@@ -19,39 +21,6 @@ function MyWork() {
         <p className="section__subtitle section__subtitle--work">A selection of my range of work</p>
         <div className="portfolio">
             {portfolioItems}
-            {/* <Link 
-                to="/portfolio"
-                state={{test1:"test1v"}}
-                className="portfolio__item">
-                <img src="../img/portfolio-01.jpg" alt="" className='portfolio__img'/>
-            </Link>
-            <a href="#" className="portfolio__item">
-                <img src="../img/portfolio-02.jpg" alt="" className='portfolio__img'/>
-            </a>
-            <a href="#" className="portfolio__item">
-                <img src="../img/portfolio-03.jpg" alt="" className='portfolio__img'/>
-            </a>
-            <a href="#" className="portfolio__item">
-                <img src="../img/portfolio-04.jpg" alt="" className='portfolio__img'/>
-            </a>
-            <a href="#" className="portfolio__item">
-                <img src="../img/portfolio-05.jpg" alt="" className='portfolio__img'/>
-            </a>
-            <a href="#" className="portfolio__item">
-                <img src="../img/portfolio-06.jpg" alt="" className='portfolio__img'/>
-            </a>
-            <a href="#" className="portfolio__item">
-                <img src="../img/portfolio-07.jpg" alt="" className='portfolio__img'/>
-            </a>
-            <a href="#" className="portfolio__item">
-                <img src="../img/portfolio-08.jpg" alt="" className='portfolio__img'/>
-            </a>
-            <a href="#" className="portfolio__item">
-                <img src="../img/portfolio-09.jpg" alt="" className='portfolio__img'/>
-            </a>
-            <a href="#" className="portfolio__item">
-                <img src="../img/portfolio-10.jpg" alt="" className='portfolio__img'/>
-            </a> */}
         </div>
     </section>
   )

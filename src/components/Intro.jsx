@@ -1,7 +1,20 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
+import Image from './Image'
+import { getAssetUrl } from '../firebase'
 
 function Intro(props) { 
-  const cvElement=<>{props.subtitle} <a className='project-link' href='../pImg/resume.pdf' target='_blank'>--CV--</a></>
+
+  const [resumeURL, setResumeURL] = useState('')
+  useEffect(() => {
+    const getURL = async () => {
+			const res = await getAssetUrl('resume.pdf')
+			setResumeURL(res)
+		}
+		getURL()
+  }, [])
+  
+
+  const cvElement=<>{props.subtitle} <a className='project-link' href={resumeURL} target='_blank'>--CV--</a></>
   const subtitleElement=!props.link?cvElement :<a className='project-link' href={`${props.link}`} target='_blank'>--Live--</a> 
   // console.log(subtitleElement)
   return (
@@ -10,7 +23,7 @@ function Intro(props) {
             {props.title} {props.name && <strong>{props.name}</strong>}
         </h1>
         <p className="section__subtitle section__subtitle--intro">{subtitleElement}</p>
-        <img src={`../pImg/${props.img[0]}`} alt="profile-pic" className='intro__img' />
+      <Image assetName={props.img[0]} className='intro__img'/>
     </section>
   )
 }

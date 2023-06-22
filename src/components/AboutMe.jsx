@@ -1,4 +1,5 @@
 import React from 'react'
+import Image from './Image'
 
 function AboutMe() {
   return (
@@ -11,7 +12,7 @@ function AboutMe() {
             <p>I have a B.Tech degree in Computer Science & Engineering from LPU with an aggregate of 8.04 CGPA.</p>
             <p>I love watching sports with a special interest in football.I also play football egames online and with the given opportunity loves to play any kind of outdoor games.</p>
         </div>
-        <img src="../pImg/profile_pic2.jpg" alt="" className='about-me__img'/>
+      <Image assetName={'profile_pic2.jpg'} className='about-me__img'/>
     </section>
   )
 }

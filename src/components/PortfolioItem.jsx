@@ -3,6 +3,7 @@ import {useLocation} from 'react-router-dom'
 import Intro from './Intro'
 import Header from './Header'
 import Footer from './Footer'
+import Image from './Image'
 export default function PortfolioItem() {
     const location=useLocation()
     const data=location.state
@@ -16,7 +17,7 @@ export default function PortfolioItem() {
           {data.techUsed && <p>Technologies Used: {data.techUsed}</p>}
           <div className='portfolio-item-individual__img-container'>
             {data.img.map((item,index)=>(
-              <img key={`${item.id}-${index}`} className='portfolio-item-individual__img' src={`pImg/${item}`} alt=""/>
+              <Image key={`${item.id}-${index}`} assetName={item} className='portfolio-item-individual__img'/>
               ))}
           </div>
               {data.overview && <p>{data.overview}</p>}

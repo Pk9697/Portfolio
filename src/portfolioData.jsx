@@ -80,6 +80,5 @@ export const portfolioData=[
                 Clicking 'get color scheme' button makes request to the color api with user selected seed color and color scheme mode.`,
         techUsed:"HTML,CSS,Javascript",
         conceptsApplied:"Interacting with api using fetch and updating color schemes using DOM manipulation ,etc."
-
     },
 ]
